@@ -1,9 +1,9 @@
-//creazione classe per creare diversi oggetti in base al costruttore interno
+//creazione della funzione( classe ) per creare diversi oggetti in base al costruttore interno
 class Person {
 
-    //funzione constructor per definire quali saranno le chiavi dell'oggetto realizzato dalla classe
-    //i parametri  dato1, dato2, dato3 definisco le posizioni per i valori che verranno associate alle chiavi
-    //this ci permette di utilizzare le chiavi all'interno della classe e anche i metodi
+    // funzione( constructor ), per definire quali saranno le chiavi dell'oggetto realizzato dalla classe
+    // i parametri ( dato1, dato2, dato3 ) definiscono le posizioni per i valori che verranno associate alle chiavi
+    // "this" ci permette di utilizzare le chiavi all'interno della classe e anche i metodi
     constructor( dato1, dato2, dato3 ){
         this.nome = dato1
         this.altezza = dato2
@@ -12,14 +12,14 @@ class Person {
 
     //metodo invocabile da un oggetto per salutare in modo dinamico
     saluto(){
-        console.log( `Ciao sono ${ this.nome } e sono alto: ${this.altezza} cm` )
+        console.log( `Ciao sono ${ this.nome }, sono alto: ${this.altezza} cm e ho gli occhi ${this.colore_occhi}.` )
     }
 
 }  
 
 //new Person => creare l'oggetto tramite il costruttore
-let oggetto1 = new Person( 'michele', 180 )
-let oggetto2 = new Person( 'federico', 175 )
+let oggetto1 = new Person( 'michele', 180, "blu" )   //==>> ( "michele" = dato1, 180 = dato2, "blu" = dato3 )
+let oggetto2 = new Person( 'federico', 175, "verdi" )   //==>> ( "federico" = dato1, 175 = dato2, "verdi" = dato3 )
 
 //invochiamo i metodi tramite l'oggetto 1 o 2
 oggetto1.saluto()
